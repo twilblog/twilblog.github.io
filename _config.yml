@@ -1,6 +1,5 @@
 # Site settings
 title: This Week I Learned
-email: ukengineering@ensighten.com
 description: > # this means to ignore newlines until "baseurl:"
   Things we learned this week, mostly programming related.
 
