@@ -40,7 +40,7 @@ curl http://localhost:8000
 "Body text"
 {% endhighlight %}
 
-This is not a complaint but an observation that node.js is opinionated about status codes and their meaning 
+This is not a complaint but an observation that Node.js is opinionated about status codes and their meaning 
 (and I didn't expect it to be).
 
 [http-rfc]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html

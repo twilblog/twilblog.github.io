@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Javascript: How to access a character at a specific position in a number"
+title:  "JavaScript: How to access a character at a specific position in a number"
 date:   2015-07-10 16:57:24
 author: Sam Adams
 categories: javascript
