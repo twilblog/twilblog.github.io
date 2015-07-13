@@ -35,7 +35,8 @@
     }
 
     .site-header span {
-        border: 10px solid #FFF;
+        border: 5px solid #FFF;
+        border-radius: 5px;
         padding: 0.3em 0.5em;
         margin: 10px 20px;
         display: inline-block;
@@ -81,11 +82,17 @@
 /* Site Footer
  * ============================================== */
     .footer {
-        padding-bottom: 3em;
+        padding-bottom: 2em;
+        padding-top: 1em;
         margin: auto;
-        font-size: 12px;
+        font-size: 16px;
         font-family: Open Sans;
         color: #959595;
+
+        a {
+            display: inline-block;
+            margin: 0 15px;
+        }
     }
 
 /* Individual Posts
