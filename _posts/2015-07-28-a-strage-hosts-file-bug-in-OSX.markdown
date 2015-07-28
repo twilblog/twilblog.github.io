@@ -20,7 +20,7 @@ So, we use the following technologies:
 Once upon a time, we tried to make our dev environment (vagrant) as 'live like' as possible. We used 
 [multiple VMs][multi-machine-vagrant] to represent each server in our production tier. 
 
-So we could be event more 'live like' (and so we didn't need to remember IP addresses) we used [vagrant hostmanager] to 
+So we could be even more 'live like' (and so we didn't need to remember IP addresses) we used [vagrant hostmanager] to 
 automatically update our host machine's `/etc/hosts` file with useful hostnames to our vagrant machine IPs, like so:
 
     ## vagrant-hostmanager-start id: 5586eff5-227f-47em-b6b9-cc7d775d8160
