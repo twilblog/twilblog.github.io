@@ -13,7 +13,8 @@ to work the way I expected it to and it all felt a bit too auto-magical to me wi
 and spring configuration.
 
 So this is how I did it:
-1. Add the dependencies:
+
+## 1. Add the dependencies:
 
 {% highlight xml %}
 <dependency>
@@ -26,7 +27,8 @@ So this is how I did it:
 </dependency>
 {% endhighlight %}
 
-1. Create the Java configuration class and set it on the Main
+## 2. Create the Java configuration class and set it on the Main
+
 {% highlight java %}
 public class MainApp {
 
@@ -62,12 +64,13 @@ public class MainApp {
 {% endhighlight %}
 
 ***NOTE:*** The Main class used is org.apache.camel.spring.javaconfig.Main (not the basic camel one) and also the
-PropertiesComponent is not required but allows you to externalise your properties values to a file
+PropertiesComponent is not required but allows you to externalise your properties values to a file.
 
 ## Testing
 
-Again many [examples here](https://camel.apache.org/spring-testing.html) (that did not play well with me) but this
-(very contrived) shows what I used in the end to get the test using the Java config.
+Again, there were [many existing examples](https://camel.apache.org/spring-testing.html), but none that played well with 
+me. 
+However, this (very contrived) example shows what I ended up using to get the test working using the Java config:
 
 {% highlight java %}
 
