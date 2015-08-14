@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Return a file stream from a REST controller in Spring"
+title:  "Return a file stream from a REST controller in Spring Boot"
 date:   2015-08-14 13:00:00
 author: Shaun Donnelly
 author_avatar: https://pbs.twimg.com/profile_images/587287617928110081/gXMbalSp_200x200.jpg
@@ -27,7 +27,7 @@ Finally, in the method copy an input stream to the response's output stream:
 @RequestMapping(value="download", method=RequestMethod.GET)
 public void getDownload(HttpServletResponse response) {
 
-    // Get your file stream from wherever.
+	// Get your file stream from wherever.
 	InputStream myStream = someClass.returnFile();
 
 	// Set the content type and attachment header.
