@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "HTTPS Endpoints with AWS SNS"
