@@ -3,9 +3,10 @@ layout: post
 title:  "Bringing up Cross Region Openswan Tunnels in AWS"
 date:   2015-09-11 11:00:00:00
 author: Ben Doyle
+author_avatar: https://res-3.cloudinary.com/status-hero/image/upload/c_fill/v1437582322/ubqxl0tjuwryeunokzwp
 categories: VPN ipsec AWS
 ---
-During a recent project, Openswan (or Freeswan) tunnels weren't coming up for me.
+During a recent project, Openswan (or Freeswan) tunnels weren't't coming up for me.
 
 I really couldn't figure out why, and the documentation was a little scarce surrounding this.
 
