@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "HTTPS Endpoints with AWS SNS"
-date:   2015-09-08 11:00:00:00
+date:   2015-09-18 11:00:00:00
 author: Ben Doyle
 author_avatar: https://res-3.cloudinary.com/status-hero/image/upload/c_fill/v1437582322/ubqxl0tjuwryeunokzwp
 categories: AWS SNS 
