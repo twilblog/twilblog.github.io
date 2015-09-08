@@ -42,7 +42,7 @@ auto=start
 {% endhighlight %}
 so that it will start when the *ipsec* service starts. 
 
-This isn't always ideal... especially if your project is to make a highly-availible cross-region VPN, with tunnel failover - More on that in future posts...
+This isn't always ideal... especially if your project is to make a highly-available cross-region VPN, with tunnel failover - More on that in future posts...
 
 
 Then, in `/etc/ipsec.secrets` I had something like:
