@@ -2,8 +2,7 @@
 layout: post
 title:  "Ansible secrets: death to Vault, long live Credstash!"
 date:   2015-09-07 22:03:24
-author_avatar: https://avatars0.githubusercontent.com/u/982046?v=3&s=460
-author: Scott Cunningham
+author: scott
 categories: ansible credstash secrets
 ---
 

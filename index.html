@@ -7,11 +7,20 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
+        {% if post.author %}
+          {% assign author = site.authors[post.author] %}
+          <small>
+            {% if author.avatar %}
+            <img class="post-avatar" src="{{ author.avatar }}" alt="{{ post.author }} avatar broken :("/>
+            {% endif %}
+            <span class="author">{{ author.display_name }}</span>
+          </small>
+        {% endif %}
+        </span>
       </li>
     {% endfor %}
   </ul>

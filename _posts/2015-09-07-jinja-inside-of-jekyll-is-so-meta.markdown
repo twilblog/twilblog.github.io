@@ -2,8 +2,7 @@
 layout: post
 title:  "Markup Matryoshka: Jinja2 inside of Jekyll"
 date:   2015-09-07 23:27:20
-author_avatar: https://avatars0.githubusercontent.com/u/982046?v=3&s=460
-author: Scott Cunningham
+author: scott
 categories: recursion markdown jinja2 jekyll meta
 ---
 
