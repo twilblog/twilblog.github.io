@@ -16,6 +16,11 @@ Add new posts in markdown to `_posts` with this at the top of the file:
     
 `author_avatar` is optional.
 
+#Deps
+
+    brew install ruby
+    sudo gem install bundle
+    sudo bundle install #from the root of this repo
 
 To see your post before submitting pull request:
 
