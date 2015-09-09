@@ -1,5 +1,20 @@
 <div class="footer" align="center">
-    <a href="/feed.xml">RSS</a>
-    <span>&middot;</span>
-    <a href="https://twitter.com/twil_blog">Twitter</a>
+{% if site.github_username %}
+    <a href="https://github.com/{{ site.github_username }}">
+      <span class="">
+        <img src="/images/github.svg"/>
+      </span>
+      <span class="username">{{ site.github_username }}</span>
+    </a>
+{% endif %}
+
+{% if site.twitter_username %}
+    <a href="https://twitter.com/{{ site.twitter_username }}">
+      <span class="">
+        <img src="/images/twitter.svg"/>
+      </span>
+      <span class="username">{{ site.twitter_username }}</span>
+    </a>
+{% endif %}
+
 </div>

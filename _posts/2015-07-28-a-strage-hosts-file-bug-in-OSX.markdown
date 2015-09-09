@@ -2,8 +2,7 @@
 layout: post
 title:  "OSX hosts file craps out on long lines"
 date:   2015-07-28 10:27:24
-author: Sam Adams
-author_avatar: http://pbs.twimg.com/profile_images/624258346107949057/IW0mJXun_200x200.png
+author: sam
 categories: mac osx dns hosts
 ---
 

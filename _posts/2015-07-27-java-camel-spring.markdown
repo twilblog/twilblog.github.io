@@ -2,7 +2,7 @@
 layout: post
 title:  "Apache Camel with Spring Java Config"
 date:   2015-07-27 15:00:00
-author: Andy
+author: andy
 categories: java spring camel
 ---
 

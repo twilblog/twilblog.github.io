@@ -2,7 +2,7 @@
 layout: post
 title:  "Useful Java APIs for unit tests"
 date:   2015-07-13 15:00:00
-author: Andy
+author: andy
 categories: java junit
 ---
 

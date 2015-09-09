@@ -2,7 +2,7 @@
 layout: post
 title:  "Node.js HTTP server won't send response body with status code: 204"
 date:   2015-07-10 16:19:24
-author: Sam Adams
+author: sam
 categories: nodejs javascript http
 ---
 
