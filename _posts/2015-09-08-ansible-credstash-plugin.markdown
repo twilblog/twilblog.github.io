@@ -7,11 +7,18 @@ author: Scott Cunningham
 categories: ansible credstash secrets
 ---
 
-I've been using Ansible for a while now. It's a great tool -- it's quick, pretty intuitive and, most importantly, allows you to build up and tear down services on top of a clean slate pretty rapidly.
+I've been using Ansible for a while now. It's a great tool -- it's quick, pretty intuitive and, most importantly, 
+allows you to build up and tear down services on top of a clean slate pretty rapidly.
 
-One thing, however, that I'm not a huge fan of is <a href="http://docs.ansible.com/ansible/playbooks_vault.html" target="_blank">Ansible Vault</a>. Ansible Vault is used for encrypting files full of variables that you mightn't want to store in cleartext anywhere -- API keys for PagerDuty, SSH keys that you use to pull code from GitHub, or something similar.
+One thing, however, that I'm not a huge fan of is <a href="http://docs.ansible.com/ansible/playbooks_vault.html" 
+target="_blank">Ansible Vault</a>. Ansible Vault is used for encrypting files full of variables that you mightn't want 
+to store in cleartext anywhere -- API keys for PagerDuty, SSH keys that you use to pull code from GitHub, or something 
+similar.
 
-While Vault works fine for many use cases, I find it a bit cumbersome to use at times: you've got to encrypt entire variable files at once. That includes your unencrypted variables too, unless you store those in separate files. This means that you need to decrypt and re-encrypt every time that you want to change a variable, and makes git diffs obtuse and difficult to parse: instead of seeing:
+While Vault works fine for many use cases, I find it a bit cumbersome to use at times: you've got to encrypt entire 
+variable files at once. That includes your unencrypted variables too, unless you store those in separate files. This 
+means that you need to decrypt and re-encrypt every time that you want to change a variable, and makes git diffs obtuse 
+and difficult to parse. For example, instead of seeing:
 
 {% highlight yaml %}
 ---
@@ -38,14 +45,20 @@ $ANSIBLE_VAULT;1.1;AES256
 Aaaaaargh!
 
 Then I found a pretty handy utility called <a href="https://github.com/LuminalOSS/credstash">Credstash</a>.
-It's a small utility that retrieves passwords stored in Amazon's <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html">DynamoDB</a> based on user credentials. Basically, certain users/roles are given access to a decryption key in Amazon <a href="https://aws.amazon.com/kms/">KMS</a> and Credstash is a nice wrapper which bundles that all together into a nice command-line tool and Python library which encrypts and decrypts passwords for you. In their own words:
+It's a small utility that retrieves passwords stored in Amazon's 
+<a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html">DynamoDB</a> based on user 
+credentials. Basically, certain users/roles are given access to a decryption key in Amazon 
+<a href="https://aws.amazon.com/kms/">KMS</a> and Credstash is a nice wrapper which bundles that all together into a 
+nice command-line tool and Python library which encrypts and decrypts passwords for you. In their own words:
 
-    CredStash is a very simple, easy to use credential management and distribution system that uses AWS Key Management
-    Service (KMS) for key wrapping and master-key storage, and DynamoDB for credential storage and sharing.
+> CredStash is a very simple, easy to use credential management and distribution system that uses AWS Key Management
+> Service (KMS) for key wrapping and master-key storage, and DynamoDB for credential storage and sharing.
 
 Nifty.
 
-I liked Credstash, so I decided to use it with Ansible. I implemented a pretty basic Ansible <a href="http://docs.ansible.com/ansible/playbooks_lookups.html">lookup plugin</a> for it. With it, and a little bit of set-up, you can dynamically look up secrets via Ansible like this:
+I liked Credstash, so I decided to use it with Ansible. I implemented a pretty basic Ansible 
+<a href="http://docs.ansible.com/ansible/playbooks_lookups.html">lookup plugin</a> for it. With it, and a little bit of 
+set-up, you can dynamically look up secrets via Ansible like this:
 
 {% highlight yaml %}
 - name: "Test credstash lookup plugin -- get the secret password"
@@ -65,4 +78,5 @@ my_nicer_list:
 {% endhighlight %}
 Not bad!
 
-I raised a <a href="https://github.com/ansible/ansible/pull/11778">pull request</a> against Ansible adding the functionality and happily, they merged it. Nice! 😎
+I raised a <a href="https://github.com/ansible/ansible/pull/11778">pull request</a> against Ansible adding the 
+functionality and happily, they merged it. Nice! 😎
