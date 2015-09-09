@@ -6,7 +6,7 @@ author: Ben Doyle
 author_avatar: https://res-3.cloudinary.com/status-hero/image/upload/c_fill/v1437582322/ubqxl0tjuwryeunokzwp
 categories: VPN ipsec AWS
 ---
-During a recent project, Openswan (or Freeswan) tunnels weren't't coming up for me.
+During a recent project, Openswan (or Freeswan) tunnels weren't coming up for me.
 
 I really couldn't figure out why, and the documentation was a little scarce surrounding this.
 
@@ -83,7 +83,7 @@ This can be done by right clicking the instance in the console, hovering over *N
 
 This isn't all you'll need to do for a proper site-to-site VPN to let traffic flow through the VPN endpoints though, one last step.
 
-In `/etc/sysctl.conf`, make sure the following are set to the following:
+In `/etc/sysctl.conf`, make sure the following are set like so:
 
 {% highlight yaml %}
 net.ipv4.ip_forward = 1
