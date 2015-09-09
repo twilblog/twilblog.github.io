@@ -21,7 +21,7 @@ We decided a nice way to get around this would be to use HTTP Basic Auth, which 
 Upon attempting to subscribe a HTTPS endpoint to an SNS topic in the AWS console, it appeared to just hang, with no confirmation status showing.
 
 # CA by some file name...
-Further research showed that if you want to use HTTPS subscriptions with SNS, you need a valid SSL certificate signed by one of [these CA's](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.https.ca.html), which are inconveniently displayed in a terrible format, making it super tricky to find any that will be garunteed to work.
+Further research showed that if you want to use HTTPS subscriptions with SNS, you need a valid SSL certificate signed by one of [these CA's](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.https.ca.html), which are inconveniently displayed in a terrible format, making it super tricky to find any that will be guaranteed to work.
 
 Usually there is a way around this for AWS IP addresses, [AWS publish a list of their current IP addresses and ranges in JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json), however the SNS ones don't seem to be there at time of writing.
 
