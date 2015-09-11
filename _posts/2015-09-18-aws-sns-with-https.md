@@ -2,8 +2,7 @@
 layout: post
 title:  "HTTPS Endpoints with AWS SNS"
 date:   2015-09-18 11:00:00:00
-author: Ben Doyle
-author_avatar: https://res-3.cloudinary.com/status-hero/image/upload/c_fill/v1437582322/ubqxl0tjuwryeunokzwp
+author: ben
 categories: AWS SNS 
 ---
 *"Meh, signed certificates, who needs em?"*
