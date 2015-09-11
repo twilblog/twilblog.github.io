@@ -2,7 +2,7 @@
 layout: post
 title:  "Starting a Jekyll Blog"
 date:   2015-07-10 11:47:24
-author: Shaun Donnelly
+author: shaun
 categories: jekyll update
 ---
 

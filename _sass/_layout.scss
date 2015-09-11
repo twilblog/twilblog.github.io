@@ -1,7 +1,7 @@
 /* Site Header
  * ============================================== */
     .site-header {
-        min-height: 350px;
+        min-height: 275px;
         background-color: $brand-color;
         background-image: url('');
         background-size: cover;
@@ -108,8 +108,21 @@
     }
 
     .post-avatar {
-        max-width: 30px;
+        /*just to make our avatars circular */
+        background: no-repeat 50%;
+        border-radius: 50%;
+
+        width: 30px;
+        height: 30px;
+
     }
+
+    .icon-sml {
+        width: 20px;
+        height: 20px;
+        display:inline-block;
+    }
+
 
 /* Archive
  * ============================================== */

@@ -2,8 +2,7 @@
 layout: post
 title:  "Return a file stream from a REST controller in Spring Boot"
 date:   2015-08-14 13:00:00
-author: Shaun Donnelly
-author_avatar: https://pbs.twimg.com/profile_images/587287617928110081/gXMbalSp_200x200.jpg
+author: shaun
 categories: java spring rest file stream
 ---
 

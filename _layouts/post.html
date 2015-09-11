@@ -7,12 +7,34 @@ layout: default
      <h1 class="post-title">{{ page.title }}</h1>
      <p class="post-meta">
          Posted on {{ page.date | date: "%b %-d, %Y" }}
-         {% if page.author %} •
-            {% if page.author_avatar %}
-        <img class="post-avatar" src="{{ page.author_avatar }}" alt="{{ page.author }} avatar broken :("/>
-            {% endif %}
-        {{ page.author }}
-        {% endif %}
+
+     {% if page.author %}
+         •
+         {% assign author = site.authors[page.author] %}
+         {% if author.avatar %}
+         <img class="post-avatar" src="{{ author.avatar }}" alt="{{ page.author }} avatar broken :("/>
+         {% endif %}
+
+         <span class="author">{{ author.display_name }}</span>
+
+         {% if author.twitter %}
+         •
+         <a href="https://twitter.com/{{ author.twitter }}">
+             <span class="icon-sml">
+                <img src="/images/twitter.svg"/>
+              </span>
+         </a>
+         {% endif %}
+
+         {% if author.github %}
+         •
+         <a href="https://github.com/{{ author.github }}">
+             <span class="icon-sml">
+                <img src="/images/github.svg"/>
+              </span>
+         </a>
+         {% endif %}
+     {% endif %}
      </p>
   </header>
 

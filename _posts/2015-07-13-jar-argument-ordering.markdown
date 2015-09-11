@@ -2,7 +2,7 @@
 layout: post
 title:  "Running JARs, and ordering your arguments"
 date:   2015-07-13 15:00:00
-author: Shaun Donnelly
+author: shaun
 categories: java jar argument
 ---
 
