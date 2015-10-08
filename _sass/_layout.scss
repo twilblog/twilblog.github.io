@@ -2,20 +2,16 @@
  * ============================================== */
     .site-header {
         min-height: 275px;
-        background-color: $brand-color;
-        background-image: url('');
-        background-size: cover;
-        background-position: center -170px;
-        background-attachment: fixed;
-        @include brand-background-gradient();
+        background-color: #222;
+        background-image: url('../images/fire.gif');
+        text-shadow: 0 0 10px rgba(0,0,0,.5);
 
         @include media-query($on-palm) {
             min-height: 250px;
-            background-position: center -250px;
         }
     }
 
-    .site-header a, a h1:hover {color: #FFF};
+    .site-header a, a h1:hover {color: #0f0};
 
     .site-header h1 {
         display: block;
@@ -25,8 +21,7 @@
         text-align: center;
         padding-top: 20px;
         clear: both;
-        text-transform: uppercase;
-        font-family: 'Open Sans';
+        font-family: Menlo, Monaco, "Andale Mono", serif;
 
         @include media-query($on-palm) {
             font-size:60px !important;
@@ -35,8 +30,6 @@
     }
 
     .site-header span {
-        border: 5px solid #FFF;
-        border-radius: 5px;
         padding: 0.3em 0.5em;
         margin: 10px 20px;
         display: inline-block;
@@ -48,7 +41,7 @@
     }
 
     .site-header .sub-title {
-        color: #fff;
+        color: #ff0;
         font-family: Menlo, Monaco, "Andale Mono", serif;
         font-size: 28px;
         text-align: center;
