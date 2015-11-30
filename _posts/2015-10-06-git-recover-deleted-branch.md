@@ -14,7 +14,7 @@ After merging a pull request, you deleted a branch from Git, both locally and re
 
 Run `git log` to see all commits made in reverse order, and find the one where the pull request was merged originally.
 
-(% highlight bash %}
+{% highlight bash %}
 commit <very long SHA here>
 Merge:  <more SHA stuff>
 Author: Hermione Granger <hgranger@ministryofmagic.uk>
@@ -23,7 +23,7 @@ Date:   Thu Nov 26 10:09:00 2015 +0000
    Merged in branch-to-recover (pull request #100)
    
    
-(% endhighlight %}
+{% endhighlight %}
 
 Copy the long SHA from the top of the entry (it looks something like `commit j45yf2yu45fuy5f3u4yt2f5acbdfdcdcdbfacdbfbfc425u`).
 
