@@ -14,31 +14,31 @@ Gone are the days of using the SimpleDateFormat to format your dates and times t
 
 One of the most frustrating problems proved to be with how the DateTimeFormatter actually works. When trying to format an Instant using the formatter shown in the below example:
 
-{% highlight java}
+{% highlight java %}
 {
 	private final DateTimeFormatter formatterItim = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
 	Instant now = Instant.now(clock).truncatedTo(ChronoUnit.SECONDS);
 	String formatted = formatterItim.format.now();
 }
-{% endhighlight}
+{% endhighlight %}
 
 Running this would cause an error and produce an extremely ambiguous stack trace:
 
-{% highlight java}
+{% highlight java %}
 {
 	java.time.temporal.UnsupportedTemporalTypeException: Unsupported field: Year
 }
-{% endhighlight}
+{% endhighlight %}
 
 # Solution
 
 Turns out this problem occured because the formatter wasn't given a Zone when it was initialized so it threw a really unhelpful and seemingly irrelevant exception. This is resolved by adding the following to DateTimeFormatter:
 
-{% highlight java}
+{% highlight java %}
 {
 	private final DateTimeFormatter formatterItim = DateTimeFormatter.ISO_OFFSET_DATE_TIME.withZone(ZoneId.systemDefault());
 }
-{% endhighlight}
+{% endhighlight %}
 
 # Problem
 
