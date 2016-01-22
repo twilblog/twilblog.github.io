@@ -59,6 +59,12 @@ String actualResponse = "{\n\"test\": 1\n}"
 assertThatJson(actualResponse).when(IGNORING_ARRAY_ORDER).isEqualTo(expectedResponse);
 {% endhighlight %}
 
+You can also easily compare the JSON against some regukar expression. For example you might want to see if a UUID was present using the string below:
+
+{% highlight java %}
+String jsonUnitUuidRegex = "${json-unit.regex}[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}";
+{% endhighlight %}
+
 Getting started is easy, just add the maven dependency and check out the [documentation](https://github.com/lukas-krecan/JsonUnit):
 {% highlight xml %}
 <dependency>
