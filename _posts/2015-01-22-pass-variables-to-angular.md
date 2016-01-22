@@ -109,7 +109,7 @@ angular.module('myAngularApp', [
 		function(success) {
 
 			// Define a 'userInfo' module.
-			angular.module('userInfo', []).constant('info', success.data);
+			angular.module('userInfo', []).constant('userInfo', success.data);
 
 			// Start myAngularApp manually.
 			angular.element(document).ready(function() {
