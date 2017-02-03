@@ -36,7 +36,7 @@ $ cp -a source/ destination/
 
 $ ls destination
 source/
-{% bash %}
+{% endhighlight %}
 
 Weird! Fortunately the solution is very simple, just add a `.`:
 
@@ -60,4 +60,4 @@ $ cp -a source/. destination/
 
 $ ls destination
 one   two   thee
-{% bash %}
+{% endhighlight %}

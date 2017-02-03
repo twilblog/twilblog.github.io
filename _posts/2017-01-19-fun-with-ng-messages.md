@@ -15,7 +15,7 @@ categories: AngularJS ng-messages
     <div ng-message="required">Cannot be blank.</div>
   </div>
 </form>
-{% html %}
+{% endhighlight %}
 
 Some nice validation, without having to write any JS code to make it happen. Nice, right?
 
@@ -26,7 +26,7 @@ of dot syntax:
 {% highlight javascript %}
 // Controller code.
 const things = ['one', 'two', 'three'];
-{% javascript %}
+{% endhighlight %}
 
 {% highlight html %}
 <form name="myForm">
@@ -37,6 +37,6 @@ const things = ['one', 'two', 'three'];
     </div>
   </div>
 </form>
-{% html %}
+{% endhighlight %}
 
 It's a bit inelegant, but it seems to be the best way to do the job.
