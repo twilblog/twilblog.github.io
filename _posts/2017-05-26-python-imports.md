@@ -19,7 +19,7 @@ my-project/
         test_main.py
 ```
 
-I'd like to use `test_main.py` to test `main.py` (unsurprisingly). But how do I import `main.py` into my test? If you're a NodeJS fanboy like myself, you might think you can do something this:
+I'd like to use `test_main.py` to test `main.py` (unsurprisingly). But how do I import `main.py` into my test? If you're a NodeJS fanboy like myself, you might think you can do something like this:
 
 ```
 import '../src/main'
